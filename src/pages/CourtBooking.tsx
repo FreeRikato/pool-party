@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Select from "../components/Select";
 
 interface Court {
   id: number;
@@ -79,21 +80,16 @@ export default function CourtBooking() {
               <label className="font-headline font-bold text-xs uppercase tracking-widest text-on-surface-variant">
                 Sport
               </label>
-              <div className="relative">
-                <select
-                  value={sport}
-                  onChange={(e) => setSport(e.target.value)}
-                  className="w-full bg-surface-container-lowest border-none rounded-lg p-4 appearance-none focus:ring-2 focus:ring-primary/20 text-on-surface font-body font-medium"
-                >
-                  <option>Soccer</option>
-                  <option>Tennis</option>
-                  <option>Basketball</option>
-                  <option>Badminton</option>
-                </select>
-                <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
-                  expand_more
-                </span>
-              </div>
+              <Select
+                value={sport}
+                onChange={setSport}
+                options={[
+                  { value: "Soccer", label: "Soccer" },
+                  { value: "Tennis", label: "Tennis" },
+                  { value: "Basketball", label: "Basketball" },
+                  { value: "Badminton", label: "Badminton" },
+                ]}
+              />
             </div>
 
             {/* Location Input */}
@@ -135,21 +131,17 @@ export default function CourtBooking() {
               <label className="font-headline font-bold text-xs uppercase tracking-widest text-on-surface-variant">
                 Time Preference
               </label>
-              <div className="relative">
-                <select
-                  value={timePreference}
-                  onChange={(e) => setTimePreference(e.target.value)}
-                  className="w-full bg-surface-container-lowest border-none rounded-lg p-4 appearance-none focus:ring-2 focus:ring-primary/20 text-on-surface font-body font-medium"
-                >
-                  <option>Morning (6am - 12pm)</option>
-                  <option>Afternoon (12pm - 5pm)</option>
-                  <option>Evening (5pm - 10pm)</option>
-                  <option>Night (10pm - 2am)</option>
-                </select>
-                <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
-                  schedule
-                </span>
-              </div>
+              <Select
+                value={timePreference}
+                onChange={setTimePreference}
+                icon="schedule"
+                options={[
+                  { value: "Morning (6am - 12pm)", label: "Morning (6am - 12pm)" },
+                  { value: "Afternoon (12pm - 5pm)", label: "Afternoon (12pm - 5pm)" },
+                  { value: "Evening (5pm - 10pm)", label: "Evening (5pm - 10pm)" },
+                  { value: "Night (10pm - 2am)", label: "Night (10pm - 2am)" },
+                ]}
+              />
             </div>
           </div>
           <div className="mt-8 flex justify-end">

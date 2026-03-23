@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Select from "../components/Select";
 
 export default function GroundOwner() {
   const [formData, setFormData] = useState({
@@ -87,19 +88,19 @@ export default function GroundOwner() {
                     <label className="font-label text-sm font-semibold text-on-surface-variant ml-1">
                       Sport Type
                     </label>
-                    <select
+                    <Select
                       value={formData.sportType}
-                      onChange={(e) =>
-                        setFormData({ ...formData, sportType: e.target.value })
+                      onChange={(value) =>
+                        setFormData({ ...formData, sportType: value })
                       }
-                      className="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 transition-all font-body outline-none appearance-none"
-                    >
-                      <option>Tennis</option>
-                      <option>Basketball</option>
-                      <option>Futsal</option>
-                      <option>Padel</option>
-                      <option>Swimming</option>
-                    </select>
+                      options={[
+                        { value: "Tennis", label: "Tennis" },
+                        { value: "Basketball", label: "Basketball" },
+                        { value: "Futsal", label: "Futsal" },
+                        { value: "Padel", label: "Padel" },
+                        { value: "Swimming", label: "Swimming" },
+                      ]}
+                    />
                   </div>
                   <div className="md:col-span-2 space-y-2">
                     <label className="font-label text-sm font-semibold text-on-surface-variant ml-1">

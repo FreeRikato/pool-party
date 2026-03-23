@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Select from "../components/Select";
 
 interface Player {
   id: number;
@@ -90,56 +91,39 @@ export default function SoloPlayer() {
             {/* Filter Card */}
             <div className="z-10 w-full max-w-md bg-surface-container-lowest p-8 rounded-2xl shadow-xl shadow-on-surface/5">
               <div className="space-y-6">
-                <div>
-                  <label className="block text-sm font-semibold text-on-surface-variant mb-2">
-                    Select Sport
-                  </label>
-                  <div className="relative">
-                    <select
-                      value={sport}
-                      onChange={(e) => setSport(e.target.value)}
-                      className="w-full bg-surface-container-low border-none rounded-xl py-4 px-4 appearance-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface font-medium"
-                    >
-                      <option>Tennis</option>
-                      <option>Padel</option>
-                      <option>Pickleball</option>
-                      <option>Badminton</option>
-                    </select>
-                    <span className="material-symbols-outlined absolute right-4 top-4 pointer-events-none text-outline">
-                      expand_more
-                    </span>
-                  </div>
-                </div>
+                <Select
+                  label="Select Sport"
+                  value={sport}
+                  onChange={setSport}
+                  options={[
+                    { value: "Tennis", label: "Tennis" },
+                    { value: "Padel", label: "Padel" },
+                    { value: "Pickleball", label: "Pickleball" },
+                    { value: "Badminton", label: "Badminton" },
+                  ]}
+                />
                 <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-on-surface-variant mb-2">
-                      Skill Level
-                    </label>
-                    <select
-                      value={skillLevel}
-                      onChange={(e) => setSkillLevel(e.target.value)}
-                      className="w-full bg-surface-container-low border-none rounded-xl py-4 px-4 appearance-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface font-medium"
-                    >
-                      <option>Beginner</option>
-                      <option>Intermediate</option>
-                      <option>Advanced</option>
-                      <option>Pro</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-on-surface-variant mb-2">
-                      Time Preference
-                    </label>
-                    <select
-                      value={timePreference}
-                      onChange={(e) => setTimePreference(e.target.value)}
-                      className="w-full bg-surface-container-low border-none rounded-xl py-4 px-4 appearance-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface font-medium"
-                    >
-                      <option>Morning</option>
-                      <option>Afternoon</option>
-                      <option>Evening</option>
-                    </select>
-                  </div>
+                  <Select
+                    label="Skill Level"
+                    value={skillLevel}
+                    onChange={setSkillLevel}
+                    options={[
+                      { value: "Beginner", label: "Beginner" },
+                      { value: "Intermediate", label: "Intermediate" },
+                      { value: "Advanced", label: "Advanced" },
+                      { value: "Pro", label: "Pro" },
+                    ]}
+                  />
+                  <Select
+                    label="Time Preference"
+                    value={timePreference}
+                    onChange={setTimePreference}
+                    options={[
+                      { value: "Morning", label: "Morning" },
+                      { value: "Afternoon", label: "Afternoon" },
+                      { value: "Evening", label: "Evening" },
+                    ]}
+                  />
                 </div>
                 <button className="w-full kinetic-gradient text-on-primary-container font-headline font-extrabold text-lg py-5 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
                   Find Players

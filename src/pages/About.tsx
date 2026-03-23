@@ -46,7 +46,7 @@ export default function About() {
             {/* Step 1 */}
             <div className="flex-1 group">
               <div className="mb-8 relative">
-                <span className="text-9xl font-headline font-black text-outline-variant/10 absolute -top-12 -left-4">
+                <span className="text-9xl font-headline font-black text-outline-variant/40 absolute -top-12 -left-4">
                   01
                 </span>
                 <div className="w-16 h-16 kinetic-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20 mb-6 relative z-10">
@@ -93,7 +93,7 @@ export default function About() {
             {/* Step 2 */}
             <div className="flex-1 group mt-12 md:mt-24">
               <div className="mb-8 relative">
-                <span className="text-9xl font-headline font-black text-outline-variant/10 absolute -top-12 -left-4">
+                <span className="text-9xl font-headline font-black text-outline-variant/40 absolute -top-12 -left-4">
                   02
                 </span>
                 <div className="w-16 h-16 kinetic-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20 mb-6 relative z-10">
@@ -146,7 +146,7 @@ export default function About() {
             {/* Step 3 */}
             <div className="flex-1 group mt-12 md:mt-0">
               <div className="mb-8 relative">
-                <span className="text-9xl font-headline font-black text-outline-variant/10 absolute -top-12 -left-4">
+                <span className="text-9xl font-headline font-black text-outline-variant/40 absolute -top-12 -left-4">
                   03
                 </span>
                 <div className="w-16 h-16 kinetic-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20 mb-6 relative z-10">
@@ -188,7 +188,7 @@ export default function About() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-headline font-black text-on-surface tracking-tight mb-12">
             Our Mission to Get <br />
-            <span className="text-transparent bg-clip-text kinetic-gradient">
+            <span className="text-primary">
               Everyone Playing.
             </span>
           </h2>
