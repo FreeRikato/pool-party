@@ -4,6 +4,8 @@ import About from "./pages/About";
 import SoloPlayer from "./pages/SoloPlayer";
 import GroundOwner from "./pages/GroundOwner";
 import CourtBooking from "./pages/CourtBooking";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -18,6 +20,8 @@ function App() {
           <Route path="/find-players" element={<SoloPlayer />} />
           <Route path="/ground-owners" element={<GroundOwner />} />
           <Route path="/book-court" element={<CourtBooking />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </main>
       <Footer />
