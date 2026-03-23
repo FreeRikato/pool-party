@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#757778",
+              "error-dim": "#b92902",
+              "tertiary-dim": "#00595f",
+              "on-tertiary-fixed-variant": "#005e65",
+              "on-primary-fixed": "#064200",
+              "surface-variant": "#dadddf",
+              "on-surface": "#2c2f30",
+              "on-tertiary-fixed": "#003f44",
+              "on-primary-fixed-variant": "#0d6200",
+              "surface-bright": "#f5f6f7",
+              "on-surface-variant": "#595c5d",
+              "inverse-on-surface": "#9b9d9e",
+              "primary-fixed-dim": "#2be800",
+              "secondary-dim": "#385173",
+              "inverse-primary": "#2ff801",
+              "surface-tint": "#0f6b00",
+              "outline-variant": "#abadae",
+              "surface": "#f5f6f7",
+              "background": "#f5f6f7",
+              "on-background": "#2c2f30",
+              "surface-dim": "#d1d5d7",
+              "error-container": "#f95630",
+              "tertiary": "#00666d",
+              "surface-container": "#e6e8ea",
+              "secondary-fixed": "#bad3fc",
+              "tertiary-container": "#19edfd",
+              "on-error": "#ffefec",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#eef3ff",
+              "inverse-surface": "#0c0f10",
+              "surface-container-highest": "#dadddf",
+              "primary": "#0f6b00",
+              "on-secondary-fixed-variant": "#395274",
+              "primary-container": "#2ff801",
+              "primary-dim": "#0c5d00",
+              "on-secondary-container": "#2f486a",
+              "surface-container-low": "#eff1f2",
+              "error": "#b02500",
+              "on-secondary-fixed": "#1b3556",
+              "tertiary-fixed-dim": "#00deed",
+              "on-tertiary": "#d0faff",
+              "on-tertiary-container": "#00535a",
+              "secondary": "#445d80",
+              "on-primary-container": "#0b5800",
+              "on-error-container": "#520c00",
+              "on-primary": "#d3ffc1",
+              "tertiary-fixed": "#19edfd",
+              "secondary-fixed-dim": "#acc5ed",
+              "secondary-container": "#bad3fc",
+              "surface-container-high": "#e0e3e4",
+              "primary-fixed": "#2ff801"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #0f6b00 0%, #2ff801 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .asymmetric-overlap {
+            margin-top: -10%;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-6 py-4 max-w-7xl mx-auto z-50 bg-white/70 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-green-700 italic font-headline tracking-tight">Pool Play</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-green-700 border-b-2 border-green-500 pb-1 font-headline font-bold tracking-tight" href="#">Home</a>
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold tracking-tight" href="#">Book a Court</a>
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold tracking-tight" href="#">Find Players</a>
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold tracking-tight" href="#">Ground Owners</a>
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold tracking-tight" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-full font-semibold text-slate-600 hover:opacity-80 transition-all">Log In</button>
+<button class="px-6 py-2 rounded-full font-bold kinetic-gradient text-on-primary-container scale-95 active:scale-90 transition-transform">Sign Up</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-6 lg:px-12">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10 relative">
+<span class="inline-block px-4 py-1 rounded-full bg-primary-container text-on-primary-container font-bold text-sm tracking-widest uppercase mb-6">
+                        Find Courts. Find Players. Play More.
+                    </span>
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl text-on-surface leading-[0.95] tracking-tighter mb-8">
+                        The Ultimate <span class="text-primary italic">Platform</span> for Athletes.
+                    </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                        Join the fastest growing sports community. Whether it's a casual match or a competitive tournament, the court is waiting for you.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 rounded-full font-bold text-lg kinetic-gradient text-on-primary-container shadow-xl shadow-primary/20 hover:scale-105 transition-transform flex items-center gap-2">
+                            Book a Court
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 rounded-full font-bold text-lg border-2 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all">
+                            Find Players
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Action basketball" class="w-full h-full object-cover" data-alt="Intense basketball game action shot on court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE2BNvrrWOS9WRwb1ZrrxI3Wp0Q2VpzgtOyKUrEjxa5wclJRVYaVctxixcACVJkmve1b-M_4FUpPqW9mbbhciLrV6y6ic6pcl_9-LxvOgi207DXpGahk2C42R4lZ6UcF8Jeqp49rKB0jHCPQvFUXKs4CBw-R2zquucldKOMReuBuWbD2C09VXsgjS6BwzxenpJh3aIiaZCquKld6rBv-f08bl5o4nEggXJoX2rowOFP5HqJUUEWszzlKDngt6kTGvyxyH_pTnWrr4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<!-- Accented Decorative Element -->
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+<div class="absolute -top-10 -right-10 w-48 h-48 bg-primary-container rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+</div>
+</div>
+</section>
+<!-- Intro Section (Semantic Shell Shift) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline font-bold text-4xl md:text-5xl mb-6 text-on-surface">How Pool Play Works</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed">
+                        We've streamlined the entire process of organizing your sports life. Whether you want to reserve a court or find a group of players for a game, we've got you covered.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Core Features: Asymmetric Bento Grid -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1: Find Courts -->
+<div class="group relative bg-surface-container-lowest rounded-[2.5rem] p-12 overflow-hidden flex flex-col justify-between min-h-[500px] transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative z-10">
+<div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-primary-container text-3xl">stadium</span>
+</div>
+<h3 class="font-headline font-bold text-4xl mb-4">Find Courts</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xs mb-8">
+                            Instant booking for the best local facilities. Filter by sport, surface, and amenities.
+                        </p>
+<button class="group/btn flex items-center gap-2 font-bold text-primary text-lg">
+                            Explore Venues
+                            <span class="material-symbols-outlined group-hover/btn:translate-x-2 transition-transform">east</span>
+</button>
+</div>
+<!-- Cut-out effect -->
+<div class="absolute right-[-10%] bottom-[-5%] w-2/3 opacity-20 group-hover:opacity-100 transition-all duration-700 transform group-hover:-translate-y-4">
+<img alt="Court texture" class="rounded-3xl" data-alt="Aerial view of colorful tennis courts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvf6HymRz52Eq-bJkZyJ1KhNKxksLJGS4sKHK97suVhelAnY9U2oAjQYNLnpSEF6EXMmcJ37u2QNfjkozd7mpQX2W18rkUumgLul2aMK24lgMUYdKiCccVkkV5tr-FoaDUr2mzXb2BgfHpMm99K-6_C5-EFIfRVfzutt8c6SAZAalIGOR5xsFidWlIlsmluKTjqwba2VNQmzEo7x0KGbkhEnH54O0uK-HJFX1qdsO6jTLxbuIo9IUsyUfyC6N5RH7q-jeiPc0kXtk"/>
+</div>
+</div>
+<!-- Card 2: Find Players -->
+<div class="group relative bg-surface-container-highest rounded-[2.5rem] p-12 overflow-hidden flex flex-col justify-between min-h-[500px] transition-all hover:shadow-2xl">
+<div class="relative z-10">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">groups</span>
+</div>
+<h3 class="font-headline font-bold text-4xl mb-4">Find Players</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xs mb-8">
+                            Match with players of your skill level. Join public games or create your own community.
+                        </p>
+<button class="group/btn flex items-center gap-2 font-bold text-secondary text-lg">
+                            Browse Community
+                            <span class="material-symbols-outlined group-hover/btn:translate-x-2 transition-transform">east</span>
+</button>
+</div>
+<!-- Overlap Imagery -->
+<div class="absolute right-[-5%] bottom-[-10%] w-3/4 opacity-40 group-hover:opacity-100 transition-all duration-700 transform group-hover:-translate-x-4">
+<img alt="Athletes high-fiving" class="rounded-3xl" data-alt="Group of diverse athletes high-fiving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnpY7SWexSSrnSjZ9n5HajhpdL7A_u4uDDKer8DKm61-YFcQmtgb6DT7Ut2yVrV8w82c9vwnS-Az7iNWgE4BH8wuRaV7CBzu1dn3_oZsu-XeZgyyOHN-DmFdp6-nJ3-XC5xrtZ7x984jTCA_Mra2QoM_4uB6B-5ZraZ39NySYSn0GVfNqE8Y5OO0TRj3N7aWfA9eBAo3YdTSkIlQw8fEjcL8qFxrB13wzy_vE90DaSE4PuplZiubsqkkyopnzBrFgian20uTY7iNs"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic CTA Banner -->
+<section class="px-6 lg:px-12 py-20">
+<div class="max-w-7xl mx-auto kinetic-gradient rounded-[3rem] p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12 text-on-primary-container relative overflow-hidden">
+<div class="relative z-10 max-w-xl">
+<h2 class="font-headline font-black text-4xl md:text-6xl mb-6 italic leading-tight">Ready to hit the court?</h2>
+<p class="text-xl font-medium opacity-90">Sign up today and get your first court booking at 50% off. Join the movement.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-white text-primary px-12 py-6 rounded-full font-black text-2xl hover:scale-110 transition-transform shadow-2xl">
+                        Join Now
+                    </button>
+</div>
+<!-- Abstract BG Texture -->
+<div class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8 py-12 bg-slate-100 dark:bg-slate-950 font-inter text-sm">
+<div class="md:col-span-1">
+<span class="text-xl font-bold text-slate-900 dark:text-white mb-4 block">Pool Play</span>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs">
+                The leading platform for modern athletes to connect, play, and grow. 
+            </p>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Book a Court</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Find Players</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Ground Owners</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Tournaments</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-green-600 font-semibold transition-all duration-300" href="#">About</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Contact</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Careers</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-6">Connect</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">share</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">mail</span>
+</div>
+<p class="mt-8 text-slate-500 dark:text-slate-400">
+                © 2024 Pool Play. All rights reserved.
+            </p>
+</div>
+</footer>
+<!-- FAB Suppression: Not rendered here as per shell rules for home pages/marketing focus -->
+</body></html>

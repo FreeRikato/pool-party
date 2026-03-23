@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book a Court | Pool Play</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#757778",
+              "error-dim": "#b92902",
+              "tertiary-dim": "#00595f",
+              "on-tertiary-fixed-variant": "#005e65",
+              "on-primary-fixed": "#064200",
+              "surface-variant": "#dadddf",
+              "on-surface": "#2c2f30",
+              "on-tertiary-fixed": "#003f44",
+              "on-primary-fixed-variant": "#0d6200",
+              "surface-bright": "#f5f6f7",
+              "on-surface-variant": "#595c5d",
+              "inverse-on-surface": "#9b9d9e",
+              "primary-fixed-dim": "#2be800",
+              "secondary-dim": "#385173",
+              "inverse-primary": "#2ff801",
+              "surface-tint": "#0f6b00",
+              "outline-variant": "#abadae",
+              "surface": "#f5f6f7",
+              "background": "#f5f6f7",
+              "on-background": "#2c2f30",
+              "surface-dim": "#d1d5d7",
+              "error-container": "#f95630",
+              "tertiary": "#00666d",
+              "surface-container": "#e6e8ea",
+              "secondary-fixed": "#bad3fc",
+              "tertiary-container": "#19edfd",
+              "on-error": "#ffefec",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#eef3ff",
+              "inverse-surface": "#0c0f10",
+              "surface-container-highest": "#dadddf",
+              "primary": "#0f6b00",
+              "on-secondary-fixed-variant": "#395274",
+              "primary-container": "#2ff801",
+              "primary-dim": "#0c5d00",
+              "on-secondary-container": "#2f486a",
+              "surface-container-low": "#eff1f2",
+              "error": "#b02500",
+              "on-secondary-fixed": "#1b3556",
+              "tertiary-fixed-dim": "#00deed",
+              "on-tertiary": "#d0faff",
+              "on-tertiary-container": "#00535a",
+              "secondary": "#445d80",
+              "on-primary-container": "#0b5800",
+              "on-error-container": "#520c00",
+              "on-primary": "#d3ffc1",
+              "tertiary-fixed": "#19edfd",
+              "secondary-fixed-dim": "#acc5ed",
+              "secondary-container": "#bad3fc",
+              "surface-container-high": "#e0e3e4",
+              "primary-fixed": "#2ff801"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #0f6b00 0%, #2ff801 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f6f7;
+            color: #2c2f30;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-6 py-4 max-w-7xl mx-auto z-50 bg-white/70 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-primary italic font-headline tracking-tight">Pool Play</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-slate-600 hover:text-primary transition-colors font-label text-sm" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label text-sm font-semibold" href="#">Book a Court</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-label text-sm" href="#">Find Players</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-label text-sm" href="#">Ground Owners</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-label text-sm" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 font-label text-sm font-medium hover:opacity-80 transition-all">Log In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label text-sm font-bold scale-95 active:scale-90 transition-transform">Sign Up</button>
+</div>
+</nav>
+<main class="pt-24 pb-12 max-w-7xl mx-auto px-6">
+<!-- Header Section with Asymmetric Momentum -->
+<header class="relative mb-16 mt-8">
+<div class="relative z-10">
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-4">
+                    THE <span class="text-primary italic">ARENA</span> <br/>
+                    IS YOURS
+                </h1>
+<p class="max-w-md text-on-surface-variant font-body text-lg">
+                    Book the highest-rated courts in the city. Professional grade surfaces for the competitive spirit.
+                </p>
+</div>
+<div class="absolute -top-10 -right-4 w-1/2 h-64 bg-secondary-container/30 -skew-x-12 rounded-xl -z-0"></div>
+</header>
+<!-- Booking Interface: Filters -->
+<section class="bg-surface-container-low rounded-xl p-8 mb-12 shadow-sm border-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Sport Dropdown -->
+<div class="flex flex-col gap-2">
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface-variant">Sport</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border-none rounded-lg p-4 appearance-none focus:ring-2 focus:ring-primary/20 text-on-surface font-body font-medium">
+<option>Soccer</option>
+<option>Tennis</option>
+<option>Basketball</option>
+<option>Badminton</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Location Input -->
+<div class="flex flex-col gap-2">
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface-variant">Location</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 text-on-surface font-body font-medium" placeholder="Search city or area..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">location_on</span>
+</div>
+</div>
+<!-- Date Picker -->
+<div class="flex flex-col gap-2">
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface-variant">Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 text-on-surface font-body font-medium" type="date"/>
+</div>
+</div>
+<!-- Time Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface-variant">Time Preference</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border-none rounded-lg p-4 appearance-none focus:ring-2 focus:ring-primary/20 text-on-surface font-body font-medium">
+<option>Morning (6am - 12pm)</option>
+<option>Afternoon (12pm - 5pm)</option>
+<option>Evening (5pm - 10pm)</option>
+<option>Night (10pm - 2am)</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">schedule</span>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-end">
+<button class="kinetic-gradient text-on-primary-container px-10 py-4 rounded-full font-headline font-extrabold text-sm uppercase tracking-widest flex items-center gap-2 hover:opacity-90 transition-all shadow-lg">
+                    Find Available Slots
+                    <span class="material-symbols-outlined" data-weight="fill">search</span>
+</button>
+</div>
+</section>
+<!-- Availability Heatmap Concept (System Style) -->
+<div class="mb-12 flex flex-col gap-4">
+<h3 class="font-headline font-bold text-lg">Peak Activity Heatmap</h3>
+<div class="w-full h-3 flex rounded-full overflow-hidden bg-surface-container-highest">
+<div class="h-full bg-secondary-fixed w-1/4"></div>
+<div class="h-full bg-primary-fixed w-1/2"></div>
+<div class="h-full bg-secondary-fixed w-1/4"></div>
+</div>
+<div class="flex justify-between text-[10px] font-headline font-bold text-on-surface-variant uppercase tracking-tighter">
+<span>06:00 AM</span>
+<span>12:00 PM (Peak)</span>
+<span>10:00 PM</span>
+</div>
+</div>
+<!-- Available Courts Section -->
+<div class="flex items-baseline justify-between mb-8">
+<h2 class="text-3xl font-black tracking-tight">AVAILABLE <span class="text-primary">COURTS</span></h2>
+<p class="text-sm font-body text-on-surface-variant">12 courts found near your location</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Court Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aerial view of professional indoor soccer field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcw2ftiE_KnNGAwX_k1yyEdnE89Z6Qzddcnl3fRk6iPMMps2iURF4cVaJ6dfhwuM9M06A5IBKmGQxKxbJdR0TJrgLGiobK9Mk3kTX6JQm8iEDjgblKFRpr6LHUHvh1gUHr7mYPsQR_B1GeG2HIiOCsN5KXkJclc7uKiSthY3CfyghpfPvvB3vO4EG-mAZJFDGXG3bJUzVvZB7iAIvc4VDRMVngt35FpVd0xtzo_zvV66wNeleq4sA9eyahRBH_-K-Nri7qQxLwI5w"/>
+<div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold font-headline">4.9</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-md font-headline font-bold text-xs">
+                        SOCCER
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold font-headline group-hover:text-primary transition-colors">Green Valley Arena</h3>
+<span class="text-primary font-black font-headline">$45<span class="text-xs text-on-surface-variant font-normal">/hr</span></span>
+</div>
+<p class="text-on-surface-variant text-sm font-body mb-6 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        122 Oak Street, Silicon Suburbs
+                    </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">18:00 - 19:00</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">19:00 - 20:00</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">21:00 - 22:00</button>
+</div>
+<button class="mt-auto w-full bg-on-surface text-white py-4 rounded-xl font-headline font-extrabold text-xs uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+                        Book Slot
+                    </button>
+</div>
+</div>
+<!-- Court Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-end rooftop tennis court at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD79sFQ6TTsn6b_f58kCsXOtPfvRpfkwHd7ptt6Qk1BZ_wOUpXNO5xIQGfGKjTDosckzG0s-Pv6Cf3eOUJeuHWxCT0in3FFNizWF-gTzzCURDtQ2Z-g3BbMwRaLIFHIciNy4WZzydRxCnLnXZe-tjTCwSo1V6fEcKghFminSqAh0DsWPJJ_E9H17UkSHBpKJM0ERNEO79riViEbHKZBFZ2aC5Ugn0F2HHjPMoxMC7vCUOybysWunKpjyPcEQwJRRxGQ7gKav3z8rcc"/>
+<div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold font-headline">4.7</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-md font-headline font-bold text-xs">
+                        TENNIS
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold font-headline group-hover:text-primary transition-colors">Downtown Sports Hub</h3>
+<span class="text-primary font-black font-headline">$30<span class="text-xs text-on-surface-variant font-normal">/hr</span></span>
+</div>
+<p class="text-on-surface-variant text-sm font-body mb-6 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        Grand Plaza, 5th Floor
+                    </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">16:00 - 17:00</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">17:00 - 18:00</button>
+<button class="px-3 py-2 rounded-lg bg-primary-container text-on-primary-container text-xs font-bold font-headline">20:00 - 21:00</button>
+</div>
+<button class="mt-auto w-full bg-on-surface text-white py-4 rounded-xl font-headline font-extrabold text-xs uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+                        Book Slot
+                    </button>
+</div>
+</div>
+<!-- Court Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern indoor basketball court with bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRzP4mcIUBEPhX1Co56yfR4AZGLhrsCxEMWy6uZyhJerF3q7X9l50bBWTvHzS4xfDNARejj05_lAXOD9aEZz6pc11lG7H86JeMHNUlkVoVGrB-60UpN7zzmApkY_e3Yp8L6UrKf8m4GaoL3Ea4uaNyPrJr5MX4s2_fHYxP4DOVETVO_OQAvWQ13LunR4BfeKFnQA6XEiT92WT3w24I43JuPqWbgYnUOkKw159gsuJW998eSy3_bdNsoxa0y923Udau2OS-v7g5mLg"/>
+<div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold font-headline">4.8</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-md font-headline font-bold text-xs">
+                        BASKETBALL
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold font-headline group-hover:text-primary transition-colors">Apex Elite Complex</h3>
+<span class="text-primary font-black font-headline">$55<span class="text-xs text-on-surface-variant font-normal">/hr</span></span>
+</div>
+<p class="text-on-surface-variant text-sm font-body mb-6 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        North Industrial Park
+                    </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">10:00 - 11:00</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">14:00 - 15:00</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-xs font-bold font-headline hover:bg-primary-container hover:text-on-primary-container transition-colors">19:00 - 20:00</button>
+</div>
+<button class="mt-auto w-full bg-on-surface text-white py-4 rounded-xl font-headline font-extrabold text-xs uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+                        Book Slot
+                    </button>
+</div>
+</div>
+</div>
+<!-- Featured Ground Owner Section (Bento Style) -->
+<section class="mt-24 grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-96">
+<div class="md:col-span-8 bg-surface-container-high rounded-2xl p-10 flex flex-col justify-end relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="Athlete walking onto a professional turf field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-sYiIqPPLjz_uc6dkxeTpkHz0ayw9Elq9tfqWAb9S0KhW30M4hakPJD7ExfgMM-2drylxThRbyaBUUfrycCarOwcXzMBRJVR1wTx1kE0tqUD0hnfobNTG-QDfOFIxaBO4-jakPzb9rMcyScrelS3aR2K8ryYMe6Ubjc7B2Tg2BSFBTuVuNK7vqTiuNIm2-cq9JQOt-QXO4f2PzV2oPc8KEaT2KcyPnb064wOskEOQLj-cUc_e3B2s-ZLuMC-NWknE8oTCMQnsBvY"/>
+<div class="relative z-10">
+<span class="text-primary font-headline font-black text-sm uppercase tracking-[0.3em] mb-2 block">Premium Experience</span>
+<h2 class="text-4xl font-black mb-4">WANT TO LIST YOUR OWN ARENA?</h2>
+<p class="max-w-md text-on-surface font-body mb-8">Join the 500+ venue owners who have scaled their booking revenue with Pool Play analytics and management tools.</p>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-extrabold text-xs tracking-widest">GET STARTED</button>
+</div>
+</div>
+<div class="md:col-span-4 bg-primary-container rounded-2xl p-10 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-6xl text-on-primary-container mb-4">bolt</span>
+<h3 class="text-2xl font-black text-on-primary-container leading-tight">INSTANT <br/> CONFIRMATION</h3>
+<p class="text-on-primary-container/80 font-body text-sm mt-4">No waiting. No calls. Just show up and play.</p>
+</div>
+</section>
+</main>
+<!-- Confirmation Toast (Hidden by default, shown for UI demonstration) -->
+<div class="fixed bottom-8 right-8 z-[100] max-w-sm pointer-events-none transform transition-all translate-y-20 opacity-0 group-active:translate-y-0 group-active:opacity-100" id="confirmation-toast">
+<div class="bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-4 border-l-4 border-primary pointer-events-auto">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="font-headline font-bold text-sm">Booking Confirmed!</p>
+<p class="text-xs text-on-surface-variant font-body">Green Valley Arena • 19:00</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8 py-12 bg-slate-100 border-none">
+<div class="flex flex-col gap-4">
+<span class="text-xl font-bold text-slate-900 font-headline">Pool Play</span>
+<p class="text-slate-500 font-body text-sm">Redefining the digital stadium experience. Premium court bookings for elite performers.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold text-sm text-slate-900 uppercase tracking-widest">Platform</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">About</a>
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">Contact</a>
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">Careers</a>
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">Terms</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold text-sm text-slate-900 uppercase tracking-widest">Sports</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">Soccer</a>
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">Tennis</a>
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">Padel</a>
+<a class="text-slate-500 hover:text-primary underline-offset-4 hover:underline transition-all duration-300 font-body text-sm" href="#">Pickleball</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold text-sm text-slate-900 uppercase tracking-widest">Newsletter</h4>
+<div class="flex bg-surface-container-highest rounded-full p-1 overflow-hidden">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-grow px-4 font-body" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-full">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<p class="text-slate-500 font-body text-[10px]">© 2024 Pool Play. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

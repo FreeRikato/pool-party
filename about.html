@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#757778",
+              "error-dim": "#b92902",
+              "tertiary-dim": "#00595f",
+              "on-tertiary-fixed-variant": "#005e65",
+              "on-primary-fixed": "#064200",
+              "surface-variant": "#dadddf",
+              "on-surface": "#2c2f30",
+              "on-tertiary-fixed": "#003f44",
+              "on-primary-fixed-variant": "#0d6200",
+              "surface-bright": "#f5f6f7",
+              "on-surface-variant": "#595c5d",
+              "inverse-on-surface": "#9b9d9e",
+              "primary-fixed-dim": "#2be800",
+              "secondary-dim": "#385173",
+              "inverse-primary": "#2ff801",
+              "surface-tint": "#0f6b00",
+              "outline-variant": "#abadae",
+              "surface": "#f5f6f7",
+              "background": "#f5f6f7",
+              "on-background": "#2c2f30",
+              "surface-dim": "#d1d5d7",
+              "error-container": "#f95630",
+              "tertiary": "#00666d",
+              "surface-container": "#e6e8ea",
+              "secondary-fixed": "#bad3fc",
+              "tertiary-container": "#19edfd",
+              "on-error": "#ffefec",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#eef3ff",
+              "inverse-surface": "#0c0f10",
+              "surface-container-highest": "#dadddf",
+              "primary": "#0f6b00",
+              "on-secondary-fixed-variant": "#395274",
+              "primary-container": "#2ff801",
+              "primary-dim": "#0c5d00",
+              "on-secondary-container": "#2f486a",
+              "surface-container-low": "#eff1f2",
+              "error": "#b02500",
+              "on-secondary-fixed": "#1b3556",
+              "tertiary-fixed-dim": "#00deed",
+              "on-tertiary": "#d0faff",
+              "on-tertiary-container": "#00535a",
+              "secondary": "#445d80",
+              "on-primary-container": "#0b5800",
+              "on-error-container": "#520c00",
+              "on-primary": "#d3ffc1",
+              "tertiary-fixed": "#19edfd",
+              "secondary-fixed-dim": "#acc5ed",
+              "secondary-container": "#bad3fc",
+              "surface-container-high": "#e0e3e4",
+              "primary-fixed": "#2ff801"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #0f6b00 0%, #2ff801 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-6 py-4 max-w-7xl mx-auto z-50 bg-white/70 backdrop-blur-md shadow-sm left-1/2 -translate-x-1/2 rounded-b-xl">
+<div class="text-2xl font-black text-green-700 italic font-headline tracking-tight">Pool Play</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold" href="#">Home</a>
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold" href="#">Book a Court</a>
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold" href="#">Find Players</a>
+<a class="text-slate-600 hover:text-green-600 transition-colors font-headline font-bold" href="#">Ground Owners</a>
+<a class="text-green-700 border-b-2 border-green-500 pb-1 font-headline font-bold" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 hover:text-green-600 font-bold transition-all duration-200 scale-95 active:scale-90">Log In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold transition-all duration-200 scale-95 active:scale-90">Sign Up</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 md:py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="relative z-10">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-sm mb-6">HOW IT WORKS</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter text-on-surface leading-none mb-8">
+                        Getting Started is <span class="text-primary">Simple.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        We've streamlined the journey from your couch to the court. No more endless group chats or missed opportunities. Just pure play.
+                    </p>
+</div>
+<div class="relative">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative bg-surface-container-low rounded-3xl p-4 overflow-hidden shadow-2xl transform rotate-2">
+<img class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full h-[500px] object-cover" data-alt="Athletic person preparing for a match on court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjDghaMVCCMvQTXsGGwEXNNc0OIChK6f-0qNLEjg4uzgOPBmT7l7WEuc4O4qShWOYhvsKvPD9h6d_Z-5Ma1wVs0HKydM99y5XcJTuAqtEyeK1bInIxlH3oOQOQWGhyzvEBnV3CmiB2dvvE1wNfj8w0hnYnb7gNX6wfukKoc1zu6ErN4ZTcxKt0ivNn_sAu5KkbdniZTkKBlDkUglMxnnCyiT8298tfYukZZl4x5NzY9njzAjl6V5rsOI5hocztNvZV6CpAx1ZC8kU"/>
+<div class="absolute bottom-10 left-10 glass-panel p-6 rounded-2xl shadow-xl max-w-xs border border-white/20">
+<p class="font-headline font-bold text-on-surface">"The fastest way I've ever found a competitive match."</p>
+<p class="text-sm text-on-surface-variant mt-2">— Alex, Semi-Pro Tennis</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step-by-Step Guide -->
+<section class="bg-surface-container-low py-24 md:py-32">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<!-- Step 1 -->
+<div class="flex-1 group">
+<div class="mb-8 relative">
+<span class="text-9xl font-headline font-black text-outline-variant/10 absolute -top-12 -left-4">01</span>
+<div class="w-16 h-16 kinetic-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20 mb-6 relative z-10">
+<span class="material-symbols-outlined text-3xl">sports_tennis</span>
+</div>
+<h3 class="text-3xl font-headline font-extrabold text-on-surface mb-4">Choose Your Sport</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Select from a wide range of available sports disciplines near you. From Padel to Basketball, we've got the arena waiting.</p>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="p-4 bg-surface-container-lowest rounded-xl flex flex-col items-center gap-2 group-hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">sports_soccer</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Soccer</span>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-xl flex flex-col items-center gap-2 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">sports_tennis</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Tennis</span>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-xl flex flex-col items-center gap-2 group-hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary">sports_basketball</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Hoops</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex-1 group mt-12 md:mt-24">
+<div class="mb-8 relative">
+<span class="text-9xl font-headline font-black text-outline-variant/10 absolute -top-12 -left-4">02</span>
+<div class="w-16 h-16 kinetic-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20 mb-6 relative z-10">
+<span class="material-symbols-outlined text-3xl">calendar_month</span>
+</div>
+<h3 class="text-3xl font-headline font-extrabold text-on-surface mb-4">Book Your Court</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Real-time availability and instant confirmation. Choose your preferred time slot and duration with zero friction.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-xl shadow-on-surface/5 border border-outline-variant/10 group-hover:-translate-y-4 transition-transform duration-500">
+<div class="flex justify-between items-center mb-6">
+<span class="font-headline font-bold text-sm">Saturday, Oct 12</span>
+<span class="material-symbols-outlined text-outline-variant">expand_more</span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between p-3 bg-surface-container-low rounded-lg opacity-40">
+<span class="font-medium text-sm">08:00 AM - 09:30 AM</span>
+<span class="text-xs font-bold">BOOKED</span>
+</div>
+<div class="flex justify-between p-3 kinetic-gradient text-on-primary-container rounded-lg shadow-md ring-4 ring-primary-container/20">
+<span class="font-bold text-sm">10:00 AM - 11:30 AM</span>
+<span class="text-xs font-black">AVAILABLE</span>
+</div>
+<div class="flex justify-between p-3 bg-surface-container-low rounded-lg">
+<span class="font-medium text-sm">12:00 PM - 01:30 PM</span>
+<span class="text-xs font-bold text-primary">SELECT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex-1 group mt-12 md:mt-0">
+<div class="mb-8 relative">
+<span class="text-9xl font-headline font-black text-outline-variant/10 absolute -top-12 -left-4">03</span>
+<div class="w-16 h-16 kinetic-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20 mb-6 relative z-10">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="text-3xl font-headline font-extrabold text-on-surface mb-4">Play and Match</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Invite your squad or find new players at your skill level. Track scores, climb leaderboards, and stay active.</p>
+</div>
+<div class="relative h-64">
+<div class="absolute top-0 right-0 w-48 h-48 rounded-full overflow-hidden border-8 border-surface-container-lowest z-20 shadow-xl group-hover:scale-110 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="Close up of two athletes high-fiving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkdO6ncaMHTRBuuSPsszKZqPwUAqGQdgG5P7u4zEu7v35f5jrUFHRAsAnLcnNekONiJwtrL5SZSN2EpPztuzoQLOfkBKbOF-4Vr5F3B8iXNL03d6IJf6zN52CWgwK-5hwGFAm_dPIysq_lxo7YD2mN9TSRMD8nDHm_1L7Z7IPTNjSMOd2TEzRD6uD6dTS2JmjQf92AkZBXz4EM-RTDo2Rm-zJlAOUWde5iTsv2cqeFU-RmPmzvL0VpbQhhDJurgWXUBUquqyQ-_HY"/>
+</div>
+<div class="absolute bottom-0 left-0 w-48 h-48 rounded-full overflow-hidden border-8 border-surface-container-lowest z-10 shadow-lg group-hover:-translate-x-4 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="A group of players walking together on a field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5B22kx3Vq8HKcCMvSCV83QzIEAuC2owbYmo742m1undQhIa0rDidIu2TFA8lPDCNg38V10eAeXuwLkMKW98y_i1WtLMPEhWVLfQJCMiJn-eDPcCHZPiCx-ED5NdrjAjoJ4Eqjkd7ze0dH6iff25bfT9dpU7QFHLhDAF-66NTg31vUOL5EpWl-6JdReS17CJWyI_ZSGjV-kP3GF4mScly8pIgaRImRNYkJJLXCexPYrak6YlEZNyHHmRaRbWodu7vts6BiAiYhExo"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Section -->
+<section class="py-24 md:py-40 px-6">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-4xl md:text-6xl font-headline font-black text-on-surface tracking-tight mb-12">
+                    Our Mission to Get <br/>
+<span class="text-transparent bg-clip-text kinetic-gradient">Everyone Playing.</span>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center text-left mt-20">
+<div>
+<h4 class="text-2xl font-headline font-bold mb-6">Democratizing Access</h4>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                            We believe sports shouldn't be gated by complicated booking systems or exclusive memberships. Pool Play was built to open up every court, pitch, and field to the community.
+                        </p>
+<div class="flex items-center gap-4 py-4 border-t border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">visibility</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Community Vision</p>
+<p class="text-sm text-on-surface-variant">Connecting 1M+ players by 2025.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 kinetic-gradient blur-[100px] opacity-20 rounded-full"></div>
+<div class="relative bg-surface-container-highest rounded-[3rem] p-1 overflow-hidden transform -rotate-3 hover:rotate-0 transition-transform duration-700">
+<img class="rounded-[2.9rem] w-full h-[400px] object-cover" data-alt="Dynamic shot of athletes in action at a multi-sport facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc6qrkMZ51kYmp2EvcJ1xgZcYoVFBwMIiQ1Hf06ota3GHtb7Ig2uVU4GJj-nhHcDG96yOceGwIwXCdHbP99jBLKURV3JkwumOGohrxMhSQRbyz5ao4JT1D40Y8P65ROXFVCmNA0EAbPZTP4mxO0zt2b31T2aU4t5b6hComVsimgG4El-3_3MJuCcAZfL-VMzQzLLlgS5Ez4Sh9o-vIq375aTlW0NMyPyJNUINKTjpu-Q_BTjGRw5hrcBvy-UNcBjZ-6dEr-V-Lqgg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="kinetic-gradient rounded-[2rem] p-12 md:p-24 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs><pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path></pattern></defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<h2 class="text-4xl md:text-6xl font-headline font-black mb-8 relative z-10">Ready to Take the Field?</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
+<button class="bg-white text-primary font-headline font-black text-lg px-10 py-5 rounded-full hover:scale-105 transition-transform shadow-2xl">Start Booking Now</button>
+<button class="bg-transparent border-2 border-white/40 text-white font-headline font-bold text-lg px-10 py-5 rounded-full hover:bg-white/10 transition-colors">Find Local Matches</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-6 md:px-12 py-12 bg-slate-100 dark:bg-slate-950">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-slate-900 dark:text-white mb-6">Pool Play</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    The ultimate platform for court bookings and player matching. Join the kinetic arena today.
+                </p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-slate-900 mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">About</a></li>
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">Careers</a></li>
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-slate-900 mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">Contact</a></li>
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">Ground Owners</a></li>
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-slate-900 mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">Terms</a></li>
+<li><a class="text-slate-500 hover:text-green-500 text-sm transition-all duration-300" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-slate-200">
+<p class="text-slate-500 text-sm">© 2024 Pool Play. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

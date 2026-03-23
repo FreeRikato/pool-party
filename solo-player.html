@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#757778",
+              "error-dim": "#b92902",
+              "tertiary-dim": "#00595f",
+              "on-tertiary-fixed-variant": "#005e65",
+              "on-primary-fixed": "#064200",
+              "surface-variant": "#dadddf",
+              "on-surface": "#2c2f30",
+              "on-tertiary-fixed": "#003f44",
+              "on-primary-fixed-variant": "#0d6200",
+              "surface-bright": "#f5f6f7",
+              "on-surface-variant": "#595c5d",
+              "inverse-on-surface": "#9b9d9e",
+              "primary-fixed-dim": "#2be800",
+              "secondary-dim": "#385173",
+              "inverse-primary": "#2ff801",
+              "surface-tint": "#0f6b00",
+              "outline-variant": "#abadae",
+              "surface": "#f5f6f7",
+              "background": "#f5f6f7",
+              "on-background": "#2c2f30",
+              "surface-dim": "#d1d5d7",
+              "error-container": "#f95630",
+              "tertiary": "#00666d",
+              "surface-container": "#e6e8ea",
+              "secondary-fixed": "#bad3fc",
+              "tertiary-container": "#19edfd",
+              "on-error": "#ffefec",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#eef3ff",
+              "inverse-surface": "#0c0f10",
+              "surface-container-highest": "#dadddf",
+              "primary": "#0f6b00",
+              "on-secondary-fixed-variant": "#395274",
+              "primary-container": "#2ff801",
+              "primary-dim": "#0c5d00",
+              "on-secondary-container": "#2f486a",
+              "surface-container-low": "#eff1f2",
+              "error": "#b02500",
+              "on-secondary-fixed": "#1b3556",
+              "tertiary-fixed-dim": "#00deed",
+              "on-tertiary": "#d0faff",
+              "on-tertiary-container": "#00535a",
+              "secondary": "#445d80",
+              "on-primary-container": "#0b5800",
+              "on-error-container": "#520c00",
+              "on-primary": "#d3ffc1",
+              "tertiary-fixed": "#19edfd",
+              "secondary-fixed-dim": "#acc5ed",
+              "secondary-container": "#bad3fc",
+              "surface-container-high": "#e0e3e4",
+              "primary-fixed": "#2ff801"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; background-color: #f5f6f7; }
+      .font-lexend { font-family: 'Lexend', sans-serif; }
+      .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+      .kinetic-gradient { background: linear-gradient(135deg, #0f6b00 0%, #2ff801 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="text-2xl font-black text-green-700 dark:text-green-400 italic font-lexend tracking-tight">Pool Play</div>
+<div class="hidden md:flex items-center space-x-8 font-lexend font-bold tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">Book a Court</a>
+<a class="text-green-700 dark:text-green-400 border-b-2 border-green-500 pb-1" href="#">Find Players</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">Ground Owners</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-300 transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all font-lexend font-bold">Log In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-lexend font-bold scale-95 active:scale-90 transition-transform">Sign Up</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero & Filters Section -->
+<section class="max-w-7xl mx-auto px-6 mb-16">
+<div class="relative bg-secondary-container rounded-3xl overflow-hidden p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img alt="Athletic pattern" class="w-full h-full object-cover" data-alt="Dynamic abstract athletic movement pattern background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA06ZLkHqiD28XI1IyrE-GPh0KkvcEfSLIHHd29fjO4UxHzuNfy2MRuc2KV7aAeHoO1DPmV-zz1wwk5dhXKD73zA5mYk0VuKWU3wqv8zXkkngMKZs3_B4p7XF79iU0hs4hU3WHvrLXpyeSc60Aj11o96qi_i0EgY16qVyXJQF3N7RMVD65W21gDiNtJGDRufENHv-0fx_mpDv9wMtxBifl6aixWZJtpiXLsYaw2O0sEE9w5FsrKJvpM74JpWVMpNo8N52iV35DDx2k"/>
+</div>
+<div class="z-10 flex-1">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-secondary-container leading-none mb-6 -ml-1">
+                        Find Your <br/><span class="text-primary italic">Perfect Match.</span>
+</h1>
+<p class="text-lg text-on-secondary-container/80 max-w-md font-body mb-8">
+                        Connect with players in your area. Set your skill level, pick a sport, and get on the court today.
+                    </p>
+</div>
+<!-- Filter Card -->
+<div class="z-10 w-full max-w-md bg-surface-container-lowest p-8 rounded-2xl shadow-xl shadow-on-surface/5">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-semibold text-on-surface-variant mb-2">Select Sport</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-none rounded-xl py-4 px-4 appearance-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface font-medium">
+<option>Tennis</option>
+<option>Padel</option>
+<option>Pickleball</option>
+<option>Badminton</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-4 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-semibold text-on-surface-variant mb-2">Skill Level</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl py-4 px-4 appearance-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface font-medium">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+<option>Pro</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-semibold text-on-surface-variant mb-2">Time Preference</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl py-4 px-4 appearance-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface font-medium">
+<option>Morning</option>
+<option>Afternoon</option>
+<option>Evening</option>
+</select>
+</div>
+</div>
+<button class="w-full kinetic-gradient text-on-primary-container font-headline font-extrabold text-lg py-5 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                            Find Players
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Results Section -->
+<section class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<span class="inline-block px-4 py-1 rounded-full bg-primary-container text-on-primary-container text-xs font-bold uppercase tracking-widest mb-4">Results</span>
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-on-surface">Match Found! Meet your next teammates.</h2>
+</div>
+<div class="flex gap-2">
+<button class="p-3 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Players -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Player 1 -->
+<div class="group bg-surface-container-low rounded-[2rem] p-6 hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="relative">
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-4 border-surface-container-lowest shadow-lg -mt-10 mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+<img alt="Alex J." class="w-full h-full object-cover" data-alt="Portrait of a smiling young male athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAifl_wxvOHSrBIlaSKE7tRAClpe4o5pb-776q72Q-xjAuVSf4lidwodWbKw6ZD4kiC11HmGXDx9-zAKZ4o654-ZdyhIdEP5--oUt41crCGN2ugcJ0JK_ElfE2JoOw_U6eMxSE-PJ0kF-VzabGPozsxPzsbwie8GuFyO2MJZnWpt6I0YZuxftDRKJsKdHpESk1N-VRfPpYYyglowZUIN19qT08OopTBQxvt-DP03E2H54_sjXZB2lQ2lOm2U3A_Hc9009OXkRpq1ig"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Alex J.</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface-variant">4.9 (24 games)</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="px-3 py-1 rounded-lg bg-tertiary-container text-on-tertiary-container text-xs font-bold font-lexend">Intermediate</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-bold font-lexend">Tennis</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Competitive player looking for early morning sets. I play aggressive baseline.</p>
+<button class="w-full bg-surface-container-lowest text-primary font-lexend font-bold py-3 rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group/btn">
+                        Invite to Game
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">send</span>
+</button>
+</div>
+<!-- Player 2 -->
+<div class="group bg-surface-container-low rounded-[2rem] p-6 hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="relative">
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-4 border-surface-container-lowest shadow-lg -mt-10 mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+<img alt="Samantha K." class="w-full h-full object-cover" data-alt="Portrait of a focused female tennis player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALiIpOnrG4z2FjbjKaiDtO7NTNByY1Id3akXcy6N0dffOLlI34eJ9mYLnuJ0wl8DkcIX4-QFCAjdwIfMvHihpnzRTbIhSQWuR2_UtC395j33EwN56bErhPRUg6zWlxEHhYtg8ngmCKE3FgvAMU1LTpTu88sNEmQeesJlpViTqrpEuvAM_gF_z85OMhfS_kKuOqhAFvsP7yjV_MQZLaALfqu1KtwjaS1yjhRgewGHAjxjNRGmeTrC-afgNqOeNlS3ldUGNVXoYbpH8"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Samantha K.</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface-variant">5.0 (52 games)</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="px-3 py-1 rounded-lg bg-tertiary-container text-on-tertiary-container text-xs font-bold font-lexend">Advanced</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-bold font-lexend">Padel</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Looking for doubles partners for weekend tournaments. Let's hit some bandejas!</p>
+<button class="w-full bg-surface-container-lowest text-primary font-lexend font-bold py-3 rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group/btn">
+                        Invite to Game
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">send</span>
+</button>
+</div>
+<!-- Player 3 -->
+<div class="group bg-surface-container-low rounded-[2rem] p-6 hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="relative">
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-4 border-surface-container-lowest shadow-lg -mt-10 mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+<img alt="Marcus T." class="w-full h-full object-cover" data-alt="Active male athlete profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmRNIfeRU_lE7cXOxY2GGO_ryf9PKiM0MHO9oPCqdNuNA-mme323p3qoABjcZJ--oJU_S6QKS7x4oAlBpKe8cfIYKksjps4TkLkhLF2hyUgPoio4ILmoVRjngNS23GiGkH0izZe9C483cY099vz4AO9leywEbzht0jGvFPPgqa9bpRpiaAJGl4whP0Acoi8-E3jiYWy1pB91n7QfCE6exNqBXdKzphwUL8CC_z0SPDkhoAOnwdq3YIAmUu2M1uGKHi-fVFqllrGs4"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Marcus T.</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface-variant">4.7 (12 games)</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="px-3 py-1 rounded-lg bg-tertiary-container text-on-tertiary-container text-xs font-bold font-lexend">Beginner</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-bold font-lexend">Pickleball</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Just started playing and loving it. Looking for chill games and learning tips.</p>
+<button class="w-full bg-surface-container-lowest text-primary font-lexend font-bold py-3 rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group/btn">
+                        Invite to Game
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">send</span>
+</button>
+</div>
+<!-- Player 4 -->
+<div class="group bg-surface-container-low rounded-[2rem] p-6 hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="relative">
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-4 border-surface-container-lowest shadow-lg -mt-10 mb-4 group-hover:-translate-y-2 transition-transform duration-500">
+<img alt="Elena R." class="w-full h-full object-cover" data-alt="Portrait of a young female athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjv2DqxsXXQbhlXGl8PvgXHzAQ5ADmWmlVHdmGfa4YKoEShBBuW-Y65u4Te5XFr3dd75mCyi-nhlb6HOkh_xDdp__0XQyYQBElxlrvgJGa7Djyhy5BlYl8jazinDjyktD_mfRSX_NJU7L4U-I493WzzohPTifiqfIBAlUX4fVoAdOf-1t4hqpXzoJA6LNlQgvjcuekF2nVWLq5T0-JkFREriQVibMvvt_fPrpdw3Bhw0AOtkbkYdixFZb9BkPMDWtaQq7SmXD26YU"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Elena R.</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface-variant">4.8 (31 games)</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="px-3 py-1 rounded-lg bg-tertiary-container text-on-tertiary-container text-xs font-bold font-lexend">Intermediate</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-bold font-lexend">Tennis</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Available for evening sessions. Consistent rally player, focused on improving footwork.</p>
+<button class="w-full bg-surface-container-lowest text-primary font-lexend font-bold py-3 rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group/btn">
+                        Invite to Game
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">send</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-6 md:px-12 py-12 bg-slate-100 dark:bg-slate-950 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<div class="text-xl font-bold text-slate-900 dark:text-white font-lexend italic">Pool Play</div>
+<p class="text-slate-500 dark:text-slate-400 font-inter text-sm max-w-xs leading-relaxed">
+                Your digital stadium for community sports. Book courts, find teammates, and level up your game.
+            </p>
+</div>
+<div>
+<h4 class="font-lexend font-bold mb-4 text-slate-900 dark:text-white">Platform</h4>
+<ul class="space-y-2 text-sm font-inter">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Find Players</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Book a Court</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Ground Owners</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-lexend font-bold mb-4 text-slate-900 dark:text-white">Company</h4>
+<ul class="space-y-2 text-sm font-inter">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">About</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Contact</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Careers</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-green-500 underline-offset-4 hover:underline transition-all duration-300" href="#">Terms</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-lexend font-bold text-slate-900 dark:text-white">Subscribe</h4>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-slate-900 border-none rounded-lg text-sm px-4 py-2 w-full focus:ring-1 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-bold text-sm">Join</button>
+</div>
+<p class="text-slate-500 dark:text-slate-400 font-inter text-sm">© 2024 Pool Play. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

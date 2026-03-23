@@ -1,5 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 @import "tailwindcss";
+
+@theme {
+  /* Primary Colors */
+  --color-primary: #0f6b00;
+  --color-primary-dim: #0c5d00;
+  --color-primary-container: #2ff801;
+  --color-on-primary: #d3ffc1;
+  --color-on-primary-container: #0b5800;
+  --color-primary-fixed: #2ff801;
+  --color-primary-fixed-dim: #2be800;
+  --color-inverse-primary: #2ff801;
+
+  /* Secondary Colors */
+  --color-secondary: #445d80;
+  --color-secondary-dim: #385173;
+  --color-secondary-container: #bad3fc;
+  --color-on-secondary: #eef3ff;
+  --color-on-secondary-container: #2f486a;
+  --color-secondary-fixed: #bad3fc;
+  --color-secondary-fixed-dim: #acc5ed;
+
+  /* Tertiary Colors */
+  --color-tertiary: #00666d;
+  --color-tertiary-dim: #00595f;
+  --color-tertiary-container: #19edfd;
+  --color-on-tertiary: #d0faff;
+  --color-on-tertiary-container: #00535a;
+  --color-tertiary-fixed: #19edfd;
+  --color-tertiary-fixed-dim: #00deed;
+
+  /* Surface Colors */
+  --color-surface: #f5f6f7;
+  --color-surface-dim: #d1d5d7;
+  --color-surface-bright: #f5f6f7;
+  --color-surface-variant: #dadddf;
+  --color-surface-container: #e6e8ea;
+  --color-surface-container-low: #eff1f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e0e3e4;
+  --color-surface-container-highest: #dadddf;
+  --color-surface-tint: #0f6b00;
+
+  /* Background & On Colors */
+  --color-background: #f5f6f7;
+  --color-on-background: #2c2f30;
+  --color-on-surface: #2c2f30;
+  --color-on-surface-variant: #595c5d;
+  --color-inverse-surface: #0c0f10;
+  --color-inverse-on-surface: #9b9d9e;
+
+  /* Outline Colors */
+  --color-outline: #757778;
+  --color-outline-variant: #abadae;
+
+  /* Error Colors */
+  --color-error: #b02500;
+  --color-error-dim: #b92902;
+  --color-error-container: #f95630;
+  --color-on-error: #ffefec;
+  --color-on-error-container: #520c00;
+
+  /* Fixed Variant Colors */
+  --color-on-primary-fixed: #064200;
+  --color-on-primary-fixed-variant: #0d6200;
+  --color-on-secondary-fixed: #1b3556;
+  --color-on-secondary-fixed-variant: #395274;
+  --color-on-tertiary-fixed: #003f44;
+  --color-on-tertiary-fixed-variant: #005e65;
+
+  /* Font Families */
+  --font-headline: 'Lexend', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Inter', sans-serif;
+}
 
 body {
   margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Kinetic Gradient */
+.kinetic-gradient {
+  background: linear-gradient(135deg, #0f6b00 0%, #2ff801 100%);
+}
+
+/* Glass Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Font Utilities */
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-label {
+  font-family: var(--font-label);
+}
+
+/* Animation utilities */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-container-low);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
 }
